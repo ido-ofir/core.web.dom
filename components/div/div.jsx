@@ -15,7 +15,7 @@ module.exports = {
         // return React.DOM.div;
         return {
             render(){
-                return <div { ...this.props }>{ this.props.children }</div>
+                return React.createElement.apply(React, ['div', this.props].concat([this.props.children]) )
             }
         }
     }
